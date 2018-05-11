@@ -30,7 +30,7 @@
           <ul class="nav navbar-nav">
 
             <?php
-              if(!isset($_COOKIE['Assignment1_session_cookie'])) {
+              if(!isset($_COOKIE['Assignment2_session_cookie'])) {
                 echo "<li><a href='user-profile.php'></t>Profile</t></a></li>";
               }
             ?>
@@ -39,13 +39,13 @@
           <ul class="nav navbar-nav navbar-right">
 
           <?php
-            if(!isset($_COOKIE['Assignment1_session_cookie'])) {
+            if(!isset($_COOKIE['Assignment2_session_cookie'])) {
               echo "<li><a href='user-login.php'> Log In </a></li>";
             }
           ?>
 
           <?php
-            if(isset($_COOKIE['Assignment1_session_cookie'])) {
+            if(isset($_COOKIE['Assignment2_session_cookie'])) {
               echo "<li><a href='user-logout.php'> Log Out </a></li>";
             }
           ?>
@@ -62,7 +62,8 @@
         <div class="col-12">
 
             <div class="card">
-              <h5 class="card-header">Please Login</h5>
+			
+              <h5 class="card-header">Update Profile</h5>
               <div class="card-body">
                     <div class="row">
                         <div class="col-sm-2"></div>
@@ -96,7 +97,7 @@
 
 
 
-                <?php if(isset($_COOKIE['Assignment1_session_cookie'])) {
+                <?php if(isset($_COOKIE['Assignment2_session_cookie'])) {
                 echo "
 						                <form method='post' action='csrf-validate.php' onsubmit='submitForm(this);'>
 
@@ -113,23 +114,23 @@
                             </div>
 
                           	<div class='form-group row'>
-                              <label for='university' class='col-sm-2 col-form-label'>University</label>
+                              <label for='hometown' class='col-sm-2 col-form-label'>Home Town</label>
+                              <div class='col-sm-10'>
+                                <input type='text' class='form-control' id='hometown' name='hometown' placeholder='Home Town' required>
+                              </div>
+                          	</div>
+
+							              <div class='form-group row'>
+                              <label for='degree' class='col-sm-2 col-form-label'>University</label>
                               <div class='col-sm-10'>
                                 <input type='text' class='form-control' id='university' name='university' placeholder='University' required>
                               </div>
                           	</div>
 
-							              <div class='form-group row'>
-                              <label for='degree' class='col-sm-2 col-form-label'>Degree</label>
-                              <div class='col-sm-10'>
-                                <input type='text' class='form-control' id='degree' name='degree' placeholder='Degree' required>
-                              </div>
-                          	</div>
-
                           	<div class='form-group row'>
-                                <label for='year' class='col-sm-2 col-form-label'>Year</label>
+                                <label for='year' class='col-sm-2 col-form-label'>Age</label>
                             <div class='col-sm-10'>
-                                <input type='number' class='form-control' id='year' name='year' placeholder='Year' required>
+                                <input type='number' class='form-control' id='age' name='age' placeholder='Age' required>
                             </div>
                           	</div>
 

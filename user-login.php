@@ -33,7 +33,7 @@
           <ul class="nav navbar-nav">
 
             <?php
-              if(!isset($_COOKIE['Assignment1_session_cookie'])) {
+              if(!isset($_COOKIE['Assignment2_session_cookie'])) {
                 echo "<li><a href='user-profile.php'></t>Profile</t></a></li>";
               }
             ?>
@@ -42,13 +42,13 @@
           <ul class="nav navbar-nav navbar-right">
 
           <?php
-            if(!isset($_COOKIE['Assignment1_session_cookie'])) {
+            if(!isset($_COOKIE['Assignment2_session_cookie'])) {
               echo "<li><a href='user-login.php'> Log In </a></li>";
             }
           ?>
 
           <?php
-            if(isset($_COOKIE['Assignment1_session_cookie'])) {
+            if(isset($_COOKIE['Assignment2_session_cookie'])) {
               echo "<li><a href='user-logout.php'> Log Out </a></li>";
             }
           ?>
@@ -65,6 +65,7 @@
           <form action ='user-login.php' method='POST' enctype='multipart/form-data'>
 
             <div class="form-group row">
+			</br>
                 <label for="email" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
                   <input type="email" class="form-control" id="email" name="email" Placeholder="User Email">
@@ -80,7 +81,7 @@
 
             <button type="submit" class="btn btn-primary" id="submit" name="submit">Login</button>
 
-
+            
 
           </form>
 
@@ -112,7 +113,7 @@
         session_start();
         session_regenerate_id();
 
-        setcookie('Assignment1_session_cookie', session_id(), time() + 300, '/');
+        setcookie('Assignment2_session_cookie', session_id(), time() + 300, '/');
 
         $token = generate_token();
 

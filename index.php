@@ -32,7 +32,7 @@
           <ul class="nav navbar-nav">
 
             <?php
-              if(isset($_COOKIE['Assignment1_session_cookie'])) {
+              if(isset($_COOKIE['Assignment2_session_cookie'])) {
                 echo "<li><a href='user-profile.php'></t>Profile</t></a></li>";
               }
             ?>
@@ -41,13 +41,13 @@
           <ul class="nav navbar-nav navbar-right">
 
           <?php
-            if(!isset($_COOKIE['Assignment1_session_cookie'])) {
+            if(!isset($_COOKIE['Assignment2_session_cookie'])) {
               echo "<li><a href='user-login.php'> Log In </a></li>";
             }
           ?>
 
           <?php
-            if(isset($_COOKIE['Assignment1_session_cookie'])) {
+            if(isset($_COOKIE['Assignment2_session_cookie'])) {
               echo "<li><a href='user-logout.php'> Log Out </a></li>";
             }
           ?>
