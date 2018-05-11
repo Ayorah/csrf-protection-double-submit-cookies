@@ -121,14 +121,14 @@
                           	</div>
 
 							              <div class='form-group row'>
-                              <label for='degree' class='col-sm-2 col-form-label'>University</label>
+                              <label for='university' class='col-sm-2 col-form-label'>University</label>
                               <div class='col-sm-10'>
                                 <input type='text' class='form-control' id='university' name='university' placeholder='University' required>
                               </div>
                           	</div>
 
                           	<div class='form-group row'>
-                                <label for='year' class='col-sm-2 col-form-label'>Age</label>
+                                <label for='age' class='col-sm-2 col-form-label'>Age</label>
                             <div class='col-sm-10'>
                                 <input type='number' class='form-control' id='age' name='age' placeholder='Age' required>
                             </div>
